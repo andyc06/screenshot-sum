@@ -12,7 +12,7 @@ SCREENSHOTS_PATH = "/Users/andy/Screenshots"
 # returns a pandas Series of high confidence numbers from the input image path
 def get_image_numbers(image_path):
     # page segmentation methods https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html#page-segmentation-method
-    # don't load dictionary (expecting few words in input image)
+    # toggle load_system_dawg to 0 if not generally expecting words in input image
     custom_config = r"--psm 11 load_system_dawg 1"
 
     image = Image.open(image_path)
